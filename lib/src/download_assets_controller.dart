@@ -12,7 +12,7 @@ class DownloadAssetsController {
   static String get assetsDir => _assetsDir;
 
   static Future init({String directory = 'assets'}) async {
-    String rootDir = (await getDownloadsDirectory()).path;
+    String rootDir = (await getExternalStorageDirectory()).path;
     _assetsDir = '$rootDir/$directory';
   }
 
